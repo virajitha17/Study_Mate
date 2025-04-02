@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyMate - Schedule Planner</title>
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>StudyMate</h1>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#upload">Upload Timetable</a>
+        <a href="#difficulty">Set Subject Difficulties</a>
+        <a href="#schedule">View Schedule</a>
+        <a href="#contact">Contact/Help</a>
+        
+    </nav>
+    <div class="container">
+        <section id="upload" class="upload-section">
+            <h2>Upload Your Timetable</h2>
+            <input type="file" accept=".pdf,.doc,.docx,.jpg,.png">
+            <button>Upload</button>
+        </section>
+        <section id="difficulty" class="difficulty-section">
+            <h2>Set Your Subject Difficulties</h2>
+            <p>Enter the number of subjects and their respective difficulty ratings (1-5). This will help prioritize your schedule.</p>
+
+            <div id="subject-input">
+                <label for="num-subjects">Number of Subjects:</label>
+                <input type="number" id="num-subjects" placeholder="Enter number of subjects" min="1" onchange="generateSubjectInputs()">
+            </div>
+
+            <div id="difficulty-inputs">
+            </div>
+
+            <button class="generate-timetable-btn" onclick="addDifficulty()">Add Subject Difficulty</button>
+
+            <ul id="difficulty-list">
+            </ul>
+        </section>
+        <section id="time-selection" class="time-selection-section">
+            <h2>Set Your Study Time</h2>
+            <label for="start-time">Start Time:</label>
+            <input type="time" id="start-time">
+            <label for="end-time">End Time:</label>
+            <input type="time" id="end-time">
+        </section>
+        <section id="generate-timetable-section" class="generate-timetable-section">
+          <h2>Generate Timetable</h2> 
+            <button class="generate-timetable-btn" onclick="generateTimetable()">Generate Timetable</button>
+        </section>
+        <section id="schedule" class="schedule-section">
+            <h2>Your Schedule</h2>
+            <table class="schedule-table" id="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                    </tr>
+                </thead>
+                <tbody id="schedule-body">
+                </tbody>
+            </table>
+            <button class="update-btn" onclick="updateSchedule()">Update Schedule</button>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2023 StudyMate. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <section id="about">
+        <div class="about-container">
+          <h2>About StudyMate</h2>
+          <p>
+            Welcome to <strong>StudyMate</strong>! We understand that every student’s learning journey is unique, which is why we've designed StudyMate to help you make the most of your study time. Our platform creates a personalized timetable tailored specifically for you, based on the subjects you are studying and how challenging you find each one. Simply rate each subject's difficulty from 1 (easiest) to 5 (hardest), and StudyMate will build a schedule that prioritizes the topics that need your focus the most.
+          </p>
+          <p>
+            Whether you’re preparing for exams or managing multiple courses, StudyMate ensures that your study time is balanced, efficient, and optimized for success. Let us take the guesswork out of planning so you can stay motivated and achieve your academic goals. With StudyMate, effective study habits are just a click away.
+          </p>
+          <p>
+            Join us today, and start building a smarter, more effective path to learning!
+          </p>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="contact-container">
+          <h2>Contact Us</h2>
+          <p>
+            We'd love to hear from you! Whether you have questions, feedback, or need assistance with using StudyMate, our team is here to help. Reach out to us through the form below or by using our contact details, and we’ll get back to you as soon as possible.
+          </p>
+          <form id="contactForm" action="#" method="post">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <p>
+                Also to contact us please take our mail id : studymate@gmail.com or contact us at 89089XXXX
+            </p>
+          </form>
+        </div>
+      </section>
+</body>
+</html>

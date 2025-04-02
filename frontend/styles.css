@@ -1,0 +1,245 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url('https://i.pinimg.com/564x/30/43/66/3043669dcae2927110d76884a7a8dda7.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: rgb(61, 4, 159);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 2em;
+}
+
+nav {
+    background-color: rgba(51, 51, 51, 0.8);
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.upload-section,
+.difficulty-section,
+.time-selection-section,
+.generate-timetable-section,
+.schedule-section {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button, .generate-timetable-btn, .update-btn {
+    background-color: #3c19b0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+button:hover, .generate-timetable-btn:hover, .update-btn:hover {
+    background-color: #782fd8;
+}
+
+#subject-input {
+    margin-bottom: 10px;
+}
+
+#difficulty-inputs {
+    margin-top: 10px;
+}
+
+#difficulty-list {
+    margin-top: 20px;
+    list-style-type: none;
+}
+
+#difficulty-list li {
+    padding: 8px;
+    background-color: #f0f0f0;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.schedule-table th, .schedule-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.schedule-table th {
+    background-color: #551aba;
+    color: white;
+    font-weight: bold;
+}
+
+#schedule-body tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+#about {
+    background-color: #f9f9f9;
+    padding: 4rem 2rem;
+    text-align: left;
+  }
+  
+  .about-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  #about h2 {
+    font-size: 2rem;
+    color: #4601b5; 
+    margin-bottom: 1rem;
+  }
+  
+  #about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 1.5rem;
+    animation: fadeIn 5s forwards;
+    animation-delay: 3s;
+  }
+
+  
+    /*#about p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 50vh;
+    font-size: 1.5rem;
+    color: #333;
+    opacity: 0; 
+    animation: fadeIn 2s forwards;
+    animation-delay: 1s; 
+  }*/
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+
+  #contact {
+    background-color: #ffffff;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  #contact h2 {
+    font-size: 2rem;
+    color: #4601b5; 
+    margin-bottom: 1rem;
+  }
+  
+  #contact p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+  
+  label {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  button[type="submit"] {
+    background-color: #4601b5;
+    color: white;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #3a0197;
+  }
+  
